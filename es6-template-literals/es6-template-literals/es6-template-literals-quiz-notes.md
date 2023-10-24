@@ -5,8 +5,9 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is the syntax for writing a template literal?
-
+  back ticks surrounding everything
 - What is "string interpolation"?
+  ability to substitute part of a string for values of variables or expressions
 
 ## Notes
 
