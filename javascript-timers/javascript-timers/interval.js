@@ -1,14 +1,12 @@
 const heading = document.querySelector('h1');
+let tracker = 4;
+const id = setInterval(handleCountdown, 1000);
 function handleCountdown() {
-  if (heading.textContent === '1') {
+  if (tracker === 1) {
     heading.textContent = '~Earth Beeeelooowww Us~';
-    return;
+    clearInterval(id);
+  } else {
+    tracker--;
+    heading.textContent = tracker;
   }
-  if (heading.textContent === '~Earth Beeeelooowww Us~') {
-    const intervalID = setInterval(handleCountdown, 1000);
-    clearInterval(intervalID);
-    return;
-  }
-  heading.textContent = Number(heading.textContent) - 1;
 }
-setInterval(handleCountdown, 1000);
