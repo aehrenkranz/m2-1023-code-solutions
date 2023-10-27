@@ -10,14 +10,9 @@ const v4 = [3, 5, 7, 9];
  * In one expression, log "v2 is truthy" to the console only if `v2` is truthy.
  * Expected: v1 message logs, v2 message does not.
  */
-function a() {
-  return v1 ? console.log('v1 is truthy') : false;
-}
-function b() {
-  return v2 ? console.log('v2 is truthy') : false;
-}
-a();
-b();
+
+v1 && console.log('v1 is truthy');
+v2 && console.log('v2 is truthy');
 
 /* TODO:
  * Demonstrate how to assign a "default value" to a variable.
