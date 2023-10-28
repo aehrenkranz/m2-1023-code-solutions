@@ -1,0 +1,75 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  height: 100%;
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.container {
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.visible {
+  display: block;
+  animation: 0.7s linear 0s 1 slide;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(350px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.row {
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  display: flex;
+  width: 60%;
+}
+
+.img-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 20em;
+  width: 50%;
+}
+
+.arrow {
+  font-size: xx-large;
+  font-weight: 900;
+  height: 45px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  padding: 0;
+  width: 20px;
+  margin: 7px;
+  font-size: larger;
+}
