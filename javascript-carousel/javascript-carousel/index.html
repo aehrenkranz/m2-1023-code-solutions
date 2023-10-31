@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Carousel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <button class="arrow" id="arrow-left">&#60;</button>
+        <div class="img-container">
+          <img src="images/001.png" class="visible" />
+          <img src="images/007.png" />
+          <img src="images/004.png" />
+          <img src="images/025.png" />
+        </div>
+        <button class="arrow" id="arrow-right">&#62;</button>
+      </div>
+      <div class="row">
+        <div class="button-container">
+          <button class="circle">&#9679;</button>
+          <button class="circle">&#9675;</button>
+          <button class="circle">&#9675;</button>
+          <button class="circle">&#9675;</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
