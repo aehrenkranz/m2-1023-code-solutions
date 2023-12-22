@@ -1,9 +1,10 @@
 import { ChangeEvent, useState } from 'react';
 import './PasswordField.css';
-let symbol = '';
-let text = '';
+
 export default function PasswordField() {
   const [input, setInput] = useState('');
+  let text = '';
+  let symbol = '';
   function handleInput(event: ChangeEvent<HTMLInputElement>) {
     setInput(event.target.value);
   }
