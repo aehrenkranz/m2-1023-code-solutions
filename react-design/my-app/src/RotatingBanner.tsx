@@ -1,9 +1,14 @@
+import { useState } from 'react';
+import './RotatingBanner.css';
+
 type Props = {
   items: string[];
+  currentIndex: number;
+
 };
 
-function Name({ items }: Props) {
-  return <p>{items[0]}</p>;
+function Banner({ items, currentIndex }: Props) {
+  return <p>{items[currentIndex]}</p>;
 }
 
 function NextButton() {
@@ -14,20 +19,35 @@ function BackButton() {
   return <button>Prev</button>;
 }
 
-function Indices({ items }: Props) {
+function Indices({ items, currentIndex}: Props) {
   const entries = [];
+
   for (let i = 0; i < items.length; i++) {
-    entries.push(<button key={i}>{i + 1}</button>);
+      if(currentIndex===i){
+        entries.push(
+        <button key={i} className="highlighted">
+          {i}
+        </button>)
+      }
+      else {entries.push(
+        <button key={i} className="">
+          {i}
+        </button>
+      )}
   }
+
+
   return <div>{entries}</div>;
 }
 
 export default function RotatingBanner({ items }: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <>
-      <Name items={items} />
+      <Banner items={items} currentIndex={currentIndex} />
       <BackButton />
-      <Indices items={items} />
+      <Indices items={items} currentIndex={currentIndex} />
       <NextButton />
     </>
   );
